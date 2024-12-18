@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Collection Manager</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Add a New Movie</h2>
+            <form id="add-movie-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="number" step="0.1" id="rating" required>
+                </div>
+                <div class="form-group">
+                    <label for="releaseYear">Release Year</label>
+                    <input type="number" id="releaseYear" required>
+                </div>
+                <button type="submit">Add Movie</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Filter Movies by Genre</h2>
+            <select id="genre-filter">
+                <option value="">All Genres</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+            </select>
+            <ul id="movie-list"></ul>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <div class="output" id="output"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
